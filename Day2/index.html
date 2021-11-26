@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<title>100DaysCSS Challenge - Day 2</title>
+  <meta charset="utf-8">
+	<meta name="description" content="My solution for the 100 days CSS challenge - Day 2">
+	<meta name="keywords" content="css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>  
+    <div class="frame">
+        <div class="center">
+              <div class="menu">
+                  <div class="line line1"></div>
+                  <div class="line line2"></div>
+                  <div class="line line3"></div>
+              </div>
+        </div>
+      </div>
+      <script>
+          const menu = document.querySelector('.menu');
+            menu.addEventListener('click', () => {
+            menu.classList.toggle('active');
+            });
+      </script>
+</body>
+</html>
