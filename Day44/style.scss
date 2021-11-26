@@ -1,0 +1,53 @@
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #000;
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+	width:200px;
+	height:200px;
+}
+.square{
+	position:absolute;
+	box-sizing:border-box;
+	animation:rotate 2s ease-in-out alternate infinite;
+	@for $i from 1 through 20 {
+		&-#{$i} {
+			$color: 230 - ($i * 8);
+			border:1px solid rgb($color, $color, $color);
+			left:90px - ($i*5);
+			top:90px - ($i*5);
+			width:10px*$i;
+			height:10px*$i;
+			animation-delay:0s + $i/30;
+		}
+	}
+}
+@keyframes rotate{
+	0%{
+		rotate:0deg;
+	}
+	100%{
+		rotate:-360deg;
+	}
+}
+.frame:hover div{
+	animation-play-state:paused;
+}
